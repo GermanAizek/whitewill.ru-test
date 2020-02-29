@@ -1,7 +1,8 @@
 ## Attention! The answers are not perfect and many are missed. Do not copy completely!
-## Внимание! Ответы не идеальны и многие пропущены, не копируйте полностью.
 
-### Questions [English]
+:beer:[ Russian questions](docs/README_RU.md)
+------
+### Answers [English]
 
 1) For example in the database MySQL we have tables posts and post_ext_attributes, with typical columns.
 Tables have a relationship posts.id = post_ext_attributes.post_id.
@@ -55,6 +56,7 @@ Backdoor script, which is stored on the server and when the script page is opene
 The easiest protection against XSS is to shield all incoming characters.
 ENT_QUOTES converts all kinds of quotation marks.
 
+Example:
 ```
 $userName = $_GET['name'];
 $userName = htmlspecialchars($userName, ENT_QUOTES);
@@ -65,3 +67,81 @@ SQL injection protection uses popular features to shield quotes from user data.
 mysql_real_escape_string or mysqli_real_escape_string
 
 > Using the PDO model improves protection by preventing multi-command queries.
+
+7) If the site uses jQuery, then to work with DOM elements, what do you prefer more (jQuery and/or DOM API) and why?
+
+> JQuery is undesirable due to performance degradation and javascript tools allow you not to use jquery. jQuery works with the DOM API, but in some cases uses its implementations.
+JQuery is very slow but comfortable.
+Concerning the question, if the whole project is written in jquery, why sso standard.
+The code will only become confusing.
+
+8) What is best to use in the JavaScript code to achieve as smooth an animation as possible? Given that the animation is not simple, the coordinates of the elements being animated are calculated using complex functions.
+
+> There are 2 types of animations. Described with CSS and JavaScript.
+If you create a smooth animation, there are keywords (ease-in, ease-out, linear, and so on).
+The smoothness of animations works on Bezier curves, and you can customize them as needed.
+
+Example:
+```
+transition: transform 100ms ease-in-out(0.2, 0.3, 0.4, 0.5);
+```
+
+> To prevent framerate from being low on devices, avoid animating feature properties.
+
+9) In the JavaScript code, there is a for loop within which the setTimeout call is nested. At each iteration, the local variable i is incremented by one, and in the anonymous function that is called, setTimeout is the output of that variable i to the console. Which digits will appear in the console at 10 iterations of the loop?
+
+> This example uses the work of closure and scope areas.
+In this code, a timer within the body of the cycle will start 10 times when one timer expires, the cycle will perform 10 iterations and the final output i will be 10.
+
+10) Write an asynchronous loop on the JavaScript, which will output digits from 1 to 10 to the console in order, and after 10 will output digits from 9 to 0
+
+Code:
+```
+const j = 11;
+for (let i = 1; i <= j; i++) {
+    if (i == j) {
+        for (let k = 9; k >= 0; k--) {
+            asynchronousProcess(function() {
+                console.log(k);
+            });
+        }
+    } else {
+        asynchronousProcess(function() {
+            console.log(i);
+        });
+    }
+}
+
+var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let i = 0;
+
+function printInc(i) {
+  console.log(array[i]);
+  i++;
+}
+
+await new Promise(resolve => setTimeout(() => resolve(printInc(i)), 1));
+```
+
+11) How do I prevent RAM leakage in PHP code, and is there a memory leakage in JavaScript code?
+
+> First, you need to determine the leak in the scripts.
+The fastest solution will be to install a ready-made profiler to monitor memory.
+
+The most popular:
+1) Xhprof + Xhgui
+2) php-memprof
+3) Google gperftools
+
+> A long option, but the capabilities of php, namely the use of memory_get_usage or memory_get_peak_usage functions.
+But these features do not track dedicated memory within libraries.
+
+> In javascript, leaks can also occur, although memory management automatically works there.
+For example, the user does not close the tab and works continuously with the interface on javascript.
+For javascript monitor scripts can be used on F12 in any browser, the Profiles tool and then look at Timeline memory.
+
+12) By the link demonstration of various methods (tests) of layout (HTML, CSS) [tests](tests), please try them again. The Annotation.txt file contains a description of each receipt (test).
+
+Task 1: [Video to show the finished solution](tests/task1/example.mp4)
+
+Answer: [Script](tests/task1/code)
