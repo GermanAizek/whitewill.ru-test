@@ -129,9 +129,9 @@ await new Promise(resolve => setTimeout(() => resolve(printInc(i)), 1));
 The fastest solution will be to install a ready-made profiler to monitor memory.
 
 The most popular:
-1) Xhprof + Xhgui
-2) php-memprof
-3) Google gperftools
+1) [Xhprof](http://pecl.php.net/package/xhprof) + [Xhgui](https://github.com/perftools/xhgui)
+2) [php-memprof](https://pecl.php.net/package/memprof)
+3) [gperftools](https://github.com/gperftools/gperftools)
 
 > A long option, but the capabilities of php, namely the use of memory_get_usage or memory_get_peak_usage functions.
 But these features do not track dedicated memory within libraries.
@@ -145,3 +145,28 @@ For javascript monitor scripts can be used on F12 in any browser, the Profiles t
 Task 1: [Video to show the finished solution](tests/task1/example.mp4)
 
 Answer: [Script](tests/task1/code)
+
+13) If you have a problem solving the problem, what will you do? Will you be looking for a solution yourself by reading forums/documentation and/or trying to ask other developers in a shared chat?
+
+> First, you have to look for the right information on your own to solve the problem. If not found on open resources then ask.
+
+14) If in practice your experience is not enough, are you ready for training? And how easy is it for you to learn new technologies?
+
+> Given that modern and new technologies are now focused on simplicity. They are not difficult to study if an old but proven base has already been studied.
+When learning C, Python is easier to teach, like any other.
+
+15) Can you roughly predict the timing of a certain task? Simple to complex, which may take more than one business day to solve.
+
+Typically, dates are calculated based on:
+1. The quantity of work at the beginning and in the process (for example, editing a project).
+2. Taking into account the use of certain tools for work (new or old).
+3. The number of people resources allocated to the project.
+
+16) Do you use the IDE to work with the code?
+
+> IDE is desirable for large projects.
+
+The following options are available from the IDE:
+1) [NetBeans](https://netbeans.org)
+2) [Eclipse](https://www.eclipse.org)
+3) [Visual Studio Code](https://code.visualstudio.com)
