@@ -146,6 +146,41 @@ Task 1: [Video to show the finished solution](tests/task1/example.mp4)
 
 Answer: [Script](tests/task1/code)
 
+
+Task 2: [Video to show the finished solution](tests/task2/example.mp4)
+
+Answer: [Script](tests/task2/code)
+
+
+Task 3: [Video to show the finished solution](tests/task3/example.mp4)
+
+Answer: [Script](tests/task3/code)
+
+
+Task 4: [Video to show the finished solution](tests/task4/example.mp4)
+
+Answer: [Script](tests/task4/code)
+
+
+Task 5: [Video to show the finished solution](tests/task5/example.mp4)
+
+Answer: [Script](tests/task5/code)
+
+
+Task 6: [Video to show the finished solution](tests/task6/example.mp4)
+
+Answer: [Script](tests/task6/code)
+
+
+Task 7: [Video to show the finished solution](tests/task7/example.mp4)
+
+Answer: [Script](tests/task7/code)
+
+
+Task 8: [Video to show the finished solution](tests/task8/example.mp4)
+
+Answer: [Script](tests/task8/code)
+
 13) If you have a problem solving the problem, what will you do? Will you be looking for a solution yourself by reading forums/documentation and/or trying to ask other developers in a shared chat?
 
 > First, you have to look for the right information on your own to solve the problem. If not found on open resources then ask.
