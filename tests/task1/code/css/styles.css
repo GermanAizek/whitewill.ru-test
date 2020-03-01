@@ -1,0 +1,7 @@
+.center {
+	display: table;
+	margin: 0 auto;
+	text-align: center;
+	width: 300px;
+	word-wrap: break-word;
+}

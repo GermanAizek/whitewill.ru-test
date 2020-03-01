@@ -1,0 +1,11 @@
+.rightfixed {
+	width: 100px;
+	height: 100px;
+	color: yellow;
+	background-color: yellow;
+	position: fixed;
+	right: 0;
+	margin-right: 2%;
+	bottom: 0;
+	margin-bottom: 2%;
+}
